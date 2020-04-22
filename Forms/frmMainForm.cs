@@ -1,13 +1,5 @@
-﻿using KioskMenu.Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KioskMenu.Forms
@@ -28,6 +20,7 @@ namespace KioskMenu.Forms
         private void btnPhotoBoothCode_Click(object sender, EventArgs e)
         {
             frmCodeSnippet code = new frmCodeSnippet();
+            code.CodeSnippets(@"\CodeSnippets\PhotoBooth\");
             code.Show();
         }
 
@@ -45,6 +38,7 @@ namespace KioskMenu.Forms
         private void btnNavigationCode_Click(object sender, EventArgs e)
         {
             frmCodeSnippet code = new frmCodeSnippet();
+            code.CodeSnippets(@"\CodeSnippets\CampusNavigation\");
             code.Show();
         }
 
@@ -62,6 +56,7 @@ namespace KioskMenu.Forms
         private void btnGameCode_Click(object sender, EventArgs e)
         {
             frmCodeSnippet code = new frmCodeSnippet();
+            code.CodeSnippets(@"\CodeSnippets\Game\");
             code.Show();
         }
 
@@ -85,29 +80,13 @@ namespace KioskMenu.Forms
             }
             else if (e.KeyCode == Keys.Escape)
             {
-                string promptValue = Prompt.ShowDialog("Password: ", "Enter Password");
-                if (promptValue == password)
+                bool result = Prompt.ShowDialog("Password: ", "Enter Password to Exit", password, "Incorrect Password. Try again.");
+                if (result)
                     Application.Exit();
-                else
-                    MessageBox.Show("Incorrect Password");
             }
         }
 
-        private void btnSlideShow_Click(object sender, EventArgs e)
-        {
-            frmSlideShow slideShow = new frmSlideShow();
-            slideShow.ShowDialog();
-        }
-
-        private void MainForm_Activated(object sender, EventArgs e)
-        {
-            /*
-            UserActivity activity = new UserActivity();
-            activity.RequestUserActivity();
-            activity.UserAtivited += btnSlideShow_Click;
-            */
-        }
-
+        #region Main Menu Button Hover
         private void Button_MouseEnter(object sender, EventArgs e)
         {
             if (sender.Equals(btnPhotoBooth))
@@ -154,6 +133,13 @@ namespace KioskMenu.Forms
                 btnNavigationCode.Image = Resources.Images.CodeClick;
             else if (sender.Equals(btnGameCode))
                 btnGameCode.Image = Resources.Images.CodeClick;
+        }
+        #endregion
+
+        private void lklAboutUs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Change to about page
+            Process.Start("http://www.google.com");
         }
     }
 }

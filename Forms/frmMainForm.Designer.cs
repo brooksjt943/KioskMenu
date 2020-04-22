@@ -41,6 +41,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnGameCode = new System.Windows.Forms.PictureBox();
             this.btnGame = new System.Windows.Forms.PictureBox();
+            this.lklAboutUs = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFooter)).BeginInit();
@@ -218,6 +219,23 @@
             this.btnGame.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.btnGame.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
+            // lklAboutUs
+            // 
+            this.lklAboutUs.ActiveLinkColor = System.Drawing.Color.Gainsboro;
+            this.lklAboutUs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lklAboutUs.AutoSize = true;
+            this.lklAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(67)))), ((int)(((byte)(69)))));
+            this.lklAboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklAboutUs.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.lklAboutUs.Location = new System.Drawing.Point(1736, 19);
+            this.lklAboutUs.Name = "lklAboutUs";
+            this.lklAboutUs.Size = new System.Drawing.Size(156, 45);
+            this.lklAboutUs.TabIndex = 9;
+            this.lklAboutUs.TabStop = true;
+            this.lklAboutUs.Text = "About Us";
+            this.lklAboutUs.VisitedLinkColor = System.Drawing.Color.WhiteSmoke;
+            this.lklAboutUs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklAboutUs_LinkClicked);
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +244,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lklAboutUs);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -239,7 +258,6 @@
             this.Name = "frmMainForm";
             this.Text = "Kiosk Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -255,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGameCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGame)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -272,5 +291,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox btnGameCode;
         private System.Windows.Forms.PictureBox btnGame;
+        private System.Windows.Forms.LinkLabel lklAboutUs;
     }
 }
