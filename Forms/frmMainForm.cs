@@ -20,15 +20,15 @@ namespace KioskMenu.Forms
         private void btnPhotoBoothCode_Click(object sender, EventArgs e)
         {
             frmCodeSnippet code = new frmCodeSnippet();
-            code.CodeSnippets(@"\CodeSnippets\PhotoBooth\");
-            code.Show();
+            code.CodeSnippets(@"\CodeSnippets\PhotoBooth\", "Photo Booth");
+            code.ShowDialog();
         }
 
         private void btnPhotoBooth_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             Process ExternalProcess = new Process();
-            ExternalProcess.StartInfo.FileName = @"C:\KioskApps\"; // Change photo booth file location
+            ExternalProcess.StartInfo.FileName = @"D:\SCC-KioskApps\"; // Change photo booth file location
             ExternalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
             ExternalProcess.Start();
             Cursor = Cursors.Arrow;
@@ -38,15 +38,15 @@ namespace KioskMenu.Forms
         private void btnNavigationCode_Click(object sender, EventArgs e)
         {
             frmCodeSnippet code = new frmCodeSnippet();
-            code.CodeSnippets(@"\CodeSnippets\CampusNavigation\");
-            code.Show();
+            code.CodeSnippets(@"\CodeSnippets\CampusNavigation\", "Campus Navigation");
+            code.ShowDialog();
         }
 
         private void btnNavigation_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             Process ExternalProcess = new Process();
-            ExternalProcess.StartInfo.FileName = @"C:\KioskApps\"; // Change navigation file location
+            ExternalProcess.StartInfo.FileName = @"D:\SCC-KioskApps\"; // Change navigation file location
             ExternalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
             ExternalProcess.Start();
             Cursor = Cursors.Arrow;
@@ -56,19 +56,25 @@ namespace KioskMenu.Forms
         private void btnGameCode_Click(object sender, EventArgs e)
         {
             frmCodeSnippet code = new frmCodeSnippet();
-            code.CodeSnippets(@"\CodeSnippets\Game\");
-            code.Show();
+            code.CodeSnippets(@"\CodeSnippets\Game\", "Space Flyers");
+            code.ShowDialog();
         }
 
         private void btnGame_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             Process ExternalProcess = new Process();
-            ExternalProcess.StartInfo.FileName = @"C:\KioskApps\"; // Change game file location
+            ExternalProcess.StartInfo.FileName = @"D:\SCC-KioskApps\"; // Change game file location
             ExternalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
             ExternalProcess.Start();
             Cursor = Cursors.Arrow;
             ExternalProcess.WaitForExit();
+        }
+
+        private void lklAboutUs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAbout about = new frmAbout();
+            about.ShowDialog();
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -135,11 +141,5 @@ namespace KioskMenu.Forms
                 btnGameCode.Image = Resources.Images.CodeClick;
         }
         #endregion
-
-        private void lklAboutUs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // Change to about page
-            Process.Start("http://www.google.com");
-        }
     }
 }

@@ -15,19 +15,28 @@ namespace KioskMenu.Forms
             InitializeComponent();
         }
 
-        public void CodeSnippets(string snippetLocation)
+        public void CodeSnippets(string snippetLocation, string header)
         {
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
-            var images = Directory.GetFiles(projectDirectory + snippetLocation, "*.png").ToList();
-            imageList = new Image[images.Count];
-
-            for (var i = 0; i < images.Count; i++)
+            try
             {
-                imageList[i] = Image.FromFile(images[i]);
-            }
+                string workingDirectory = Environment.CurrentDirectory;
+                string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
+                var images = Directory.GetFiles(projectDirectory + snippetLocation, "*.png").ToList();
+                imageList = new Image[images.Count];
 
-            picCode.Image = imageList[index];
+                for (var i = 0; i < images.Count; i++)
+                {
+                    imageList[i] = Image.FromFile(images[i]);
+                }
+
+                lblHeader.Text = header;
+                if (imageList[index] != null)
+                    picCode.Image = imageList[index];
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)

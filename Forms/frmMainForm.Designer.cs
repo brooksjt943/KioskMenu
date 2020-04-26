@@ -60,7 +60,7 @@
             // 
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(452, 220);
+            this.picLogo.Location = new System.Drawing.Point(460, 220);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(1025, 360);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,7 +74,7 @@
             this.picHeader.Image = ((System.Drawing.Image)(resources.GetObject("picHeader.Image")));
             this.picHeader.Location = new System.Drawing.Point(0, 0);
             this.picHeader.Name = "picHeader";
-            this.picHeader.Size = new System.Drawing.Size(1904, 151);
+            this.picHeader.Size = new System.Drawing.Size(1920, 151);
             this.picHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHeader.TabIndex = 4;
             this.picHeader.TabStop = false;
@@ -84,9 +84,9 @@
             this.picFooter.BackColor = System.Drawing.Color.Transparent;
             this.picFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.picFooter.Image = ((System.Drawing.Image)(resources.GetObject("picFooter.Image")));
-            this.picFooter.Location = new System.Drawing.Point(0, 890);
+            this.picFooter.Location = new System.Drawing.Point(0, 929);
             this.picFooter.Name = "picFooter";
-            this.picFooter.Size = new System.Drawing.Size(1904, 151);
+            this.picFooter.Size = new System.Drawing.Size(1920, 151);
             this.picFooter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFooter.TabIndex = 5;
             this.picFooter.TabStop = false;
@@ -95,7 +95,7 @@
             // 
             this.panel1.Controls.Add(this.btnPhotoBoothCode);
             this.panel1.Controls.Add(this.btnPhotoBooth);
-            this.panel1.Location = new System.Drawing.Point(308, 633);
+            this.panel1.Location = new System.Drawing.Point(316, 633);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 200);
             this.panel1.TabIndex = 6;
@@ -138,7 +138,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.btnNavigationCode);
             this.panel2.Controls.Add(this.btnNavigation);
-            this.panel2.Location = new System.Drawing.Point(752, 633);
+            this.panel2.Location = new System.Drawing.Point(760, 633);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 200);
             this.panel2.TabIndex = 7;
@@ -181,7 +181,7 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnGameCode);
             this.panel3.Controls.Add(this.btnGame);
-            this.panel3.Location = new System.Drawing.Point(1196, 633);
+            this.panel3.Location = new System.Drawing.Point(1204, 633);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 200);
             this.panel3.TabIndex = 8;
@@ -227,12 +227,12 @@
             this.lklAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(67)))), ((int)(((byte)(69)))));
             this.lklAboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lklAboutUs.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.lklAboutUs.Location = new System.Drawing.Point(1736, 19);
+            this.lklAboutUs.Location = new System.Drawing.Point(1787, 20);
             this.lklAboutUs.Name = "lklAboutUs";
-            this.lklAboutUs.Size = new System.Drawing.Size(156, 45);
+            this.lklAboutUs.Size = new System.Drawing.Size(110, 45);
             this.lklAboutUs.TabIndex = 9;
             this.lklAboutUs.TabStop = true;
-            this.lklAboutUs.Text = "About Us";
+            this.lklAboutUs.Text = "About";
             this.lklAboutUs.VisitedLinkColor = System.Drawing.Color.WhiteSmoke;
             this.lklAboutUs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklAboutUs_LinkClicked);
             // 
@@ -243,7 +243,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.lklAboutUs);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

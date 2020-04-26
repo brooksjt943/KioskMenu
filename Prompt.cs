@@ -32,11 +32,11 @@ namespace KioskMenu
             prompt.AcceptButton = confirmation;
 
             bool textMatch = false;
-            DialogResult result = prompt.ShowDialog();
+            prompt.ShowDialog();
             if (textBox.Text == value)
             {
                 textMatch = true;
-                result = DialogResult.OK;
+                prompt.DialogResult = DialogResult.OK;
             }
             else
             {
