@@ -81,8 +81,10 @@ namespace KioskMenu.Forms
         {
             if (e.Control)
             {
+                /*
                 SlideShowConfig form = new SlideShowConfig();
                 form.ShowDialog();
+                */
             }
             else if (e.KeyCode == Keys.Escape)
             {

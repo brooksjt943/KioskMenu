@@ -28,32 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.wbAbout = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
-            // 
-            // wbAbout
-            // 
-            this.wbAbout.Location = new System.Drawing.Point(919, 263);
-            this.wbAbout.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wbAbout.Name = "wbAbout";
-            this.wbAbout.Size = new System.Drawing.Size(256, 218);
-            this.wbAbout.TabIndex = 0;
             // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.wbAbout);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAbout";
-            this.Text = "About";
-            this.Load += new System.EventHandler(this.frmAbout_Load);
+            this.ShowIcon = false;
+            this.Text = "SCC Kiosk - About";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAbout_FormClosed);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.WebBrowser wbAbout;
     }
 }

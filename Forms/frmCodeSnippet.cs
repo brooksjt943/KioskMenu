@@ -20,7 +20,7 @@ namespace KioskMenu.Forms
             try
             {
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName + @"\..";
                 var images = Directory.GetFiles(projectDirectory + snippetLocation, "*.png").ToList();
                 imageList = new Image[images.Count];
 

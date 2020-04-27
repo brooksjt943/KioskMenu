@@ -23,6 +23,7 @@ namespace KioskMenu.Forms
 
         private void SlideShow_Load(object sender, EventArgs e)
         {
+            /*
             SlideShowTimer.Enabled = true;
             imgFiles = new List<Bitmap>();
 
@@ -33,6 +34,7 @@ namespace KioskMenu.Forms
                 imgFiles.Add((Bitmap)entry.Value);
             }
             DisplayNextImage();
+            */
         }
 
         private void picSlideShow_Click(object sender, EventArgs e)
