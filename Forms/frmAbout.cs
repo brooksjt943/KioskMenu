@@ -19,28 +19,35 @@ namespace KioskMenu.Forms
 
         private void InitializeChromium()
         {
-            CefSettings settings = new CefSettings();
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
-
-            settings.RegisterScheme(new CefCustomScheme
+            try
             {
-                SchemeName = "localfolder",
-                DomainName = "cefsharp",
-                SchemeHandlerFactory = new FolderSchemeHandlerFactory(
-                rootFolder: projectDirectory + @"\..\Webpage",
-                hostName: "cefsharp",
-                defaultPage: "index.html" // will default to index.html
-                )
-            });
+                CefSettings settings = new CefSettings();
+                string workingDirectory = Environment.CurrentDirectory;
+                string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
 
-            // Initizlie cef with provided settins.
-            if (Cef.IsInitialized == false)
-                Cef.Initialize(settings);
+                settings.RegisterScheme(new CefCustomScheme
+                {
+                    SchemeName = "localfolder",
+                    DomainName = "cefsharp",
+                    SchemeHandlerFactory = new FolderSchemeHandlerFactory(
+                    rootFolder: projectDirectory + @"\..\Webpage",
+                    hostName: "cefsharp",
+                    defaultPage: "index.html" // will default to index.html
+                    )
+                });
 
-            chromeBrowser = new ChromiumWebBrowser("localfolder://cefsharp/");
-            this.Controls.Add(chromeBrowser);
-            chromeBrowser.Dock = DockStyle.Fill;
+                // Initizlie cef with provided settins.
+                if (Cef.IsInitialized == false)
+                    Cef.Initialize(settings);
+
+                chromeBrowser = new ChromiumWebBrowser("localfolder://cefsharp/");
+                this.Controls.Add(chromeBrowser);
+                chromeBrowser.Dock = DockStyle.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Webpage not found. " + ex.Message, "SCC Kiosk", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void frmAbout_FormClosed(object sender, FormClosedEventArgs e)

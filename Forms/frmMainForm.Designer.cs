@@ -60,7 +60,7 @@
             // 
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(460, 220);
+            this.picLogo.Location = new System.Drawing.Point(448, 220);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(1025, 360);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,7 +258,6 @@
             this.Name = "frmMainForm";
             this.Text = "Kiosk Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeader)).EndInit();

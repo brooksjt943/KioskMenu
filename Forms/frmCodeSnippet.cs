@@ -35,7 +35,7 @@ namespace KioskMenu.Forms
             }
             catch (Exception ex)
             {
-                
+                MessageBox.Show("Code snippets were not found. " + ex.Message, "SCC Kiosk", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

@@ -36,11 +36,13 @@
             this.btnPrevious = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.panSnippet = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFooter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).BeginInit();
+            this.panSnippet.SuspendLayout();
             this.SuspendLayout();
             // 
             // picHeader
@@ -69,10 +71,11 @@
             // 
             // picCode
             // 
-            this.picCode.Location = new System.Drawing.Point(560, 157);
+            this.picCode.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.picCode.Location = new System.Drawing.Point(0, 0);
             this.picCode.Name = "picCode";
-            this.picCode.Size = new System.Drawing.Size(800, 688);
-            this.picCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picCode.Size = new System.Drawing.Size(800, 741);
+            this.picCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picCode.TabIndex = 7;
             this.picCode.TabStop = false;
             // 
@@ -124,6 +127,16 @@
             this.lblHeader.Text = "Code Header";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panSnippet
+            // 
+            this.panSnippet.AutoScroll = true;
+            this.panSnippet.BackColor = System.Drawing.Color.White;
+            this.panSnippet.Controls.Add(this.picCode);
+            this.panSnippet.Location = new System.Drawing.Point(560, 157);
+            this.panSnippet.Name = "panSnippet";
+            this.panSnippet.Size = new System.Drawing.Size(800, 741);
+            this.panSnippet.TabIndex = 12;
+            // 
             // frmCodeSnippet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,11 +144,11 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panSnippet);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.picCode);
             this.Controls.Add(this.picFooter);
             this.Controls.Add(this.picHeader);
             this.DoubleBuffered = true;
@@ -148,6 +161,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevious)).EndInit();
+            this.panSnippet.ResumeLayout(false);
+            this.panSnippet.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +176,6 @@
         private System.Windows.Forms.PictureBox btnPrevious;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.Panel panSnippet;
     }
 }
